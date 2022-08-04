@@ -1,6 +1,6 @@
-namespace PrefixId.Tests
+namespace Prefix.Id.Tests
 {
-    public class Tests
+    public class PrefixIdTests
     {
         [SetUp]
         public void Setup()
