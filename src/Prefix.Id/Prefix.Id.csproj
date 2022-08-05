@@ -1,8 +1,23 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
+    <Authors>Lesley Funwie</Authors>
+    <Company>Funwie.com</Company>
+    <Description> Stripe like prefix id generator for .Net Core</Description>
+    <PackageProjectUrl>https://github.com/funwie/PrefixId</PackageProjectUrl>
+    <Title>Stripe like prefix id generator for C# .Net Core</Title>
+    <Description>Generate prefix ids for C# and .Net core projects</Description>
+    <NeutralLanguage>en-GB</NeutralLanguage>
+    <PackageTags>id;generator;prefix;id;stripe;id;distributed;id;generation</PackageTags>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/funwie/PrefixId</RepositoryUrl>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="C:\repos\PrefixId\README.md" />
+  </ItemGroup>
 
 </Project>
