@@ -52,17 +52,7 @@ namespace Prefix.Id
 
         public static T Parse(string value)
         {
-            if (string.IsNullOrWhiteSpace(value))
-            {
-                throw new ArgumentNullException(nameof(value));
-            }
-
-            if (TryParse(value, out var id) is false)
-            {
-                throw new ArgumentNullException(nameof(id));
-            }
-
-            return id!;
+            return TryParse(value, out var id) is false ? throw new ArgumentException("Value is not a valid prefix id", nameof(value)) : id!;
         }
 
         public Guid ToGuid() => _decodedGuid;
@@ -76,8 +66,6 @@ namespace Prefix.Id
         public override int GetHashCode() => HashCode.Combine(_prefix, _decodedGuid);
 
         public override string ToString() => Value;
-
-        public static explicit operator PrefixId<T>(string value) => Parse(value);
 
         public static implicit operator string(PrefixId<T> id) => id is null ? throw new ArgumentNullException(nameof(id)) : id.Value;
 

@@ -1,7 +1,7 @@
-﻿namespace Prefix.Id.Tests
+﻿namespace Prefix.Id.Tests;
+
+public class TestId : PrefixId<TestId>
 {
-    public class TestId : PrefixId<TestId>
-    {
-        public override string Prefix => "test";
-    }
+    public override string Prefix => "test";
 }
+
