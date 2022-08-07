@@ -14,6 +14,7 @@
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/funwie/PrefixId</RepositoryUrl>
     <LangVersion>latest</LangVersion>
+    <Version>$(VersionPrefix)</Version>
   </PropertyGroup>
 
   <ItemGroup>
