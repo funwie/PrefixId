@@ -18,8 +18,8 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Pack
-      run: dotnet pack src/Prefix.Id/Prefix.Id.csproj --no-build -p:PackageVersion=${{ github.event.release.tag_name }} --output nupkgs
+      run: dotnet pack src/Prefix.Id/Prefix.Id.csproj -c Release --no-restore -p:PackageVersion=${{ github.event.release.tag_name }} --output nupkgs
     - name: Publish
-      run: dotnet nuget push nupkgs/*.nupkg --api-key ${{ secrets.NUGET_KEY }} --source https://api.nuget.org/v3/index.json
+      run: dotnet nuget push nupkgs/Prefix.Id.${{ github.event.release.tag_name }}.nupkg --api-key ${{ secrets.NUGET_KEY }} --source https://api.nuget.org/v3/index.json
     - name: Display
-      run: echo "Prefix.Id.${{ github.event.release.tag_name }} published"
+      run: echo "Prefix.Id.${{ github.event.release.tag_name }}.nupkg published"
