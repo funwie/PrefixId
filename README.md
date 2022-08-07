@@ -3,6 +3,7 @@
  ## Stripe like prefix id generator for .Net Core
  ### Generate prefix IDs for C# and .Net core projects
 
+![Tests](https://github.com/funwie/PrefixId/actions/workflows/dotnet_ci.yml/badge.svg)
 
  ```csharp
  // Implement your domain id
